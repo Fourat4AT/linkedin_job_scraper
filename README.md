@@ -1,33 +1,54 @@
-# linkedin_job_scraper
-Advanced LinkedIn scraping and job data extraction using Python + BeautifulSoup
+# linkedin_job_scraper  
+**Advanced LinkedIn Job Intelligence Tool**  
+*AI-Powered Scraping + NLP Skill Extraction + Live Web App*
+
+---
 
 ## Overview
-This project is a Python-based web scraper that extracts job listings from LinkedIn. It collects information such as:
 
-- Job Title
-- Company
-- Location
-- Job Link
-- Description
-- Skills detected from the description
-- Work Type
-- Experience Level
-- Date Scraped
+A **real-time LinkedIn job scraper** that extracts, analyzes, and exports job listings with **AI-detected technical skills**.
 
-The scraper uses `requests` and `BeautifulSoup` to parse LinkedIn job postings and `Gradio` for a user-friendly web interface.
+**Key Features:**
+- **AI Skill Detection** using Flair NLP (`ner-skill` model)
+- **Live Web Interface** built with Gradio
+- **Multi-filter Search**: City, Country, Position, Work Type, Experience Level, Time Posted
+- **Live Table Updates** during scraping
+- **One-Click CSV Export**
+- **Stop Anytime** with instant thread termination
 
 ---
 
-## Features
-- Filter jobs by **location**, **position**, **work type**, **experience level**, and **posting date**.
-- Displays scraped job data in an interactive table.
-- Export results to CSV.
-- Stop scraping at any time using the interface.
+## Screenshots
+
+*(Add these later — drag images into GitHub)*
+
+| ![UI](screenshots/ui.png) | ![Results](screenshots/results.png) |
+|---------------------------|-------------------------------------|
+| **Interactive Web App**   | **AI-Detected Skills**              |
 
 ---
 
-## Requirements
-- Python 3.8+
-- Libraries:  
-  ```bash
-  pip install requests beautifulsoup4 pandas gradio
+## Features in Detail
+
+| Feature | Description |
+|--------|-------------|
+| **AI Skill Extraction** | Uses `flair-ner-skill` model to detect skills like `Python`, `AWS`, `Docker`, `TensorFlow` from job descriptions |
+| **Live Scraping** | Background threading + `yield` updates Gradio table in real time |
+| **Smart Filters** | Combines location, position, work type, experience, and recency |
+| **Robust Error Handling** | Retry logic, timeouts, fallbacks on failed requests |
+| **CSV Export** | Saves full dataset with one click to `saved_jobs/` |
+| **Stop Control** | Immediate stop via `threading.Event()` |
+
+---
+
+## Tech Stack
+
+```text
+Python 3.8+
+├── requests
+├── BeautifulSoup4
+├── pandas
+├── gradio
+├── flair (NLP)
+├── threading
+└── urllib3
