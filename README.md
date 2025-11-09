@@ -16,17 +16,7 @@ A **real-time LinkedIn job scraper** that extracts, analyzes, and exports job li
 - **One-Click CSV Export**
 - **Stop Anytime** with instant thread termination
 
----
 
-## Screenshots
-
-*(Add these later — drag images into GitHub)*
-
-| ![UI](screenshots/ui.png) | ![Results](screenshots/results.png) |
-|---------------------------|-------------------------------------|
-| **Interactive Web App**   | **AI-Detected Skills**              |
-
----
 
 ## Features in Detail
 
